@@ -75,6 +75,9 @@ AI-task-manager-project/
 ├── diagrams/                           # ER & Architecture Diagrams
 │
 └── README.md
+```
+
+---
 
 ## Architecture Overview
 
