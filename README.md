@@ -377,10 +377,10 @@ Password must contain:
 ![AI Assistant](screenshots/ai-assistant.png)
 
 ### AI Generated Task
-![AI Generated Task](screenshots/ai-generated-task.png)
+![AI Generated Task](screenshots/ai-assistant-response.png)
 
 ### Task Status Update
-![Task Status Update](screenshots/task-status-update.png)
+![Task Status Update](screenshots/edit-task.png)
 
 ---
 
