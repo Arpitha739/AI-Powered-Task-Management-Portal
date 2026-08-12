@@ -361,17 +361,26 @@ Password must contain:
 
 ## Screenshots
 
-Add screenshots here:
+### Login Page
+![Login Page](screenshots/login-page.png)
 
-1. Login Page
-2. Registration Page
-3. Dashboard
-4. Create Task
-5. Edit Task
-6. AI Assistant
-7. AI Generated Task
-8. Task List
-9. Task Status Update
+### Registration Page
+![Registration Page](screenshots/register-page.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Create Task
+![Create Task](screenshots/create-task.png)
+
+### AI Assistant
+![AI Assistant](screenshots/ai-assistant.png)
+
+### AI Generated Task
+![AI Generated Task](screenshots/ai-generated-task.png)
+
+### Task Status Update
+![Task Status Update](screenshots/task-status-update.png)
 
 ---
 
