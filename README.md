@@ -31,6 +31,52 @@ AI-Powered Task Management Portal is a full-stack web application that enables u
 
 ---
 
+## Project Structure
+
+```text
+AI-task-manager-project/
+│
+├── ai-task-manager/                  # Spring Boot Backend
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com.taskportal/
+│   │   │   │       ├── config/
+│   │   │   │       ├── controller/
+│   │   │   │       ├── dto/
+│   │   │   │       ├── entity/
+│   │   │   │       ├── exception/
+│   │   │   │       ├── repository/
+│   │   │   │       ├── security/
+│   │   │   │       ├── service/
+│   │   │   │       ├── serviceimpl/
+│   │   │   │       └── util/
+│   │   │   └── resources/
+│   │   │       └── application.properties
+│   │   └── test/
+│   └── pom.xml
+│
+├── AI-Task-Manager-Frontend/         # React Frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.css
+│   │   └── App.jsx
+│   │   └── index.css
+│   │   └── main.jsx
+|   |    
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── screenshots/                       # Application Screenshots
+│
+├── diagrams/                          # ER & Architecture Diagrams
+│
+└── README.md
+
 ## Architecture Overview
 
 ```text
@@ -283,10 +329,10 @@ Request:
 git clone <repository-url>
 ```
 
-2. Open backend project
+2. Navigate to the backend project
 
 ```bash
-cd backend
+cd ai-task-manager
 ```
 
 3. Configure environment variables
@@ -316,10 +362,10 @@ http://localhost:8080
 
 ### Frontend Setup
 
-1. Open frontend project
+1. Navigate to the frontend project
 
 ```bash
-cd frontend
+cd AI-Task-Manager-Frontend
 ```
 
 2. Install dependencies
@@ -403,6 +449,64 @@ The database schema was implemented using MySQL.
 
 ![User DB](screenshots/user-db.png)
 
+## Application Flow
+
+### Authentication Flow
+
+User
+   ↓
+React Login/Register
+   ↓
+Spring Boot Authentication API
+   ↓
+BCrypt Password Verification
+   ↓
+JWT Token Generated
+↓
+JWT Token Stored in Browser Local Storage
+↓
+JWT Attached to Protected API Requests
+
+### Task Flow
+
+User
+   ↓
+React Dashboard
+   ↓
+Axios REST API
+   ↓
+JWT Authentication
+   ↓
+Task Controller
+   ↓
+Task Service
+   ↓
+Task Repository
+   ↓
+MySQL
+
+### AI Task Generation Flow
+
+User enters task title
+   ↓
+React AI Assistant
+   ↓
+Axios
+   ↓
+Spring Boot AI Controller
+   ↓
+AI Service
+   ↓
+Google Gemini API
+   ↓
+Description + Priority + Estimated Hours
+   ↓
+React Dashboard
+   ↓
+User confirms task
+   ↓
+Task saved to MySQL
+
 ## Challenges Faced
 
 - Implementing JWT Authentication
@@ -411,6 +515,17 @@ The database schema was implemented using MySQL.
 - Managing User-Specific Task Access
 - Handling Validation and Exceptions
 - Connecting Frontend and Backend APIs
+
+---
+
+## Assumptions
+
+- Each registered user can access and manage only their own tasks.
+- JWT authentication is required for protected task and AI APIs.
+- MySQL is used as the relational database.
+- Google Gemini API is used for AI-powered task generation.
+- AI-generated task details are suggestions and can be modified by the user before saving.
+- Blockchain integration was treated as an optional bonus feature and was not implemented because the mandatory requirements were prioritized.
 
 ---
 
