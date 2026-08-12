@@ -382,6 +382,9 @@ Password must contain:
 ### Task Status Update
 ![Task Status Update](screenshots/edit-task.png)
 
+### My Task
+![My Task](screenshots/my-task.png)
+
 ---
 
 ## Challenges Faced
