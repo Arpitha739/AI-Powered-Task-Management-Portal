@@ -387,6 +387,22 @@ Password must contain:
 
 ---
 
+## Database Schema
+
+![ER Diagram](diagrams/er-diagram.png)
+
+## Architecture Diagram
+
+![Architecture Diagram](diagrams/architecture.png)
+
+## Database Implementation
+
+The database schema was implemented using MySQL.
+
+![Task DB](screenshots/task-db.png)
+
+![User DB](screenshots/user-db.png)
+
 ## Challenges Faced
 
 - Implementing JWT Authentication
