@@ -71,9 +71,7 @@ AI-task-manager-project/
 │   └── vite.config.js
 │
 ├── screenshots/                        # Application Screenshots
-│
 ├── diagrams/                           # ER & Architecture Diagrams
-│
 └── README.md
 ```
 
