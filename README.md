@@ -36,7 +36,7 @@ AI-Powered Task Management Portal is a full-stack web application that enables u
 ```text
 AI-task-manager-project/
 │
-├── ai-task-manager/                  # Spring Boot Backend
+├── ai-task-manager/                    # Spring Boot Backend
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/
@@ -56,24 +56,23 @@ AI-task-manager-project/
 │   │   └── test/
 │   └── pom.xml
 │
-├── AI-Task-Manager-Frontend/         # React Frontend
+├── AI-Task-Manager-Frontend/           # React Frontend
 │   ├── src/
 │   │   ├── components/
 │   │   ├── context/
 │   │   ├── pages/
 │   │   ├── services/
-│   │   └── App.css
-│   │   └── App.jsx
-│   │   └── index.css
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
 │   │   └── main.jsx
-|   |    
 │   ├── public/
 │   ├── package.json
 │   └── vite.config.js
 │
-├── screenshots/                       # Application Screenshots
+├── screenshots/                        # Application Screenshots
 │
-├── diagrams/                          # ER & Architecture Diagrams
+├── diagrams/                           # ER & Architecture Diagrams
 │
 └── README.md
 
