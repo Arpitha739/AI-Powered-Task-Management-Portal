@@ -558,6 +558,7 @@ The database schema was implemented using MySQL.
 
 ### Authentication Flow
 
+```text
 User
    ↓
 React Login/Register
@@ -567,13 +568,15 @@ Spring Boot Authentication API
 BCrypt Password Verification
    ↓
 JWT Token Generated
-↓
+   ↓
 JWT Token Stored in Browser Local Storage
-↓
+   ↓
 JWT Attached to Protected API Requests
+```
 
 ### Task Flow
 
+```text
 User
    ↓
 React Dashboard
@@ -588,29 +591,32 @@ Task Service
    ↓
 Task Repository
    ↓
-MySQL
+MySQL Database
+```
 
 ### AI Task Generation Flow
 
-User enters task title
+```text
+User Enters Task Title
    ↓
 React AI Assistant
    ↓
-Axios
+Axios Request
    ↓
 Spring Boot AI Controller
    ↓
-AI Service
+AI Service Layer
    ↓
 Google Gemini API
    ↓
-Description + Priority + Estimated Hours
+Generated Description + Priority + Estimated Hours
    ↓
 React Dashboard
    ↓
-User confirms task
+User Reviews and Confirms Task
    ↓
-Task saved to MySQL
+Task Saved to MySQL
+```
 
 ## Challenges Faced
 
