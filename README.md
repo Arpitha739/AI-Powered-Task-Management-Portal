@@ -477,16 +477,36 @@ The backend securely reads the API key from environment variables and communicat
 
 ### Registration Validation
 
-Password must contain:
-- Minimum 8 characters
-- One uppercase letter
-- One lowercase letter
-- One number
-- One special character
+- Name cannot be blank
+- Email must be in a valid format
+- Email must be unique (duplicate registration is not allowed)
+- Password cannot be blank
+- Password must contain:
+  - Minimum 8 characters
+  - One uppercase letter
+  - One lowercase letter
+  - One number
+  - One special character
+
+### Login Validation
+
+- Email must be in a valid format
+- Password cannot be blank
+- Invalid email or password returns an appropriate error message
 
 ### Task Validation
 
-- Title cannot be blank
+- Task title cannot be blank
+
+### Exception Handling
+
+Global exception handling is implemented using `@RestControllerAdvice` for:
+
+- Validation errors
+- Duplicate email registration
+- Invalid login credentials
+- Application runtime exceptions
+- Unexpected server errors
 
 ---
 
