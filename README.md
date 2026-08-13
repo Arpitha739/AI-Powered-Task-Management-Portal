@@ -319,23 +319,53 @@ Request:
 
 ---
 
-## Setup Instructions
+# Setup Instructions
 
-### Backend Setup
+## Prerequisites
 
-1. Clone the repository
+Install the following software before running the project:
+
+- Java 17
+- Eclipse IDE (for Spring Boot Backend)
+- Visual Studio Code (for React Frontend)
+- MySQL Server
+- Maven
+- Node.js and npm
+- Google Gemini API Key
+
+---
+
+## Backend Setup (Spring Boot)
+
+### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
 ```
 
-2. Navigate to the backend project
+### 2. Open Backend in Eclipse
 
-```bash
-cd ai-task-manager
+- Open Eclipse IDE
+- Select **File → Import**
+- Choose **Existing Maven Projects**
+- Browse to:
+
+```text
+AI-task-manager-project/ai-task-manager
 ```
 
-3. Configure environment variables
+- Click **Finish**
+- Wait for Maven dependencies to download
+
+### 3. Create MySQL Database
+
+```sql
+CREATE DATABASE task_manager_db;
+```
+
+### 4. Configure Environment Variables
+
+Set the following environment variables:
 
 ```text
 DB_URL
@@ -346,13 +376,32 @@ JWT_EXPIRATION
 GEMINI_API_KEY
 ```
 
-4. Run Spring Boot Application
+### 5. Update application.properties (if required)
+
+```properties
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+
+jwt.secret=${JWT_SECRET}
+jwt.expiration=${JWT_EXPIRATION}
+```
+
+### 6. Run Spring Boot Application
+
+Run:
+
+```text
+AiTaskManagerApplication.java
+```
+
+or
 
 ```bash
 mvn spring-boot:run
 ```
 
-Backend runs on:
+Backend URL:
 
 ```text
 http://localhost:8080
@@ -360,31 +409,67 @@ http://localhost:8080
 
 ---
 
-### Frontend Setup
+## Frontend Setup (React + Vite)
 
-1. Navigate to the frontend project
+### 1. Open Frontend in VS Code
 
-```bash
-cd AI-Task-Manager-Frontend
+Open:
+
+```text
+AI-task-manager-project/AI-Task-Manager-Frontend
 ```
 
-2. Install dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-3. Start application
+### 3. Start Frontend Application
 
 ```bash
 npm run dev
 ```
 
-Frontend runs on:
+Frontend URL:
 
 ```text
 http://localhost:5173
 ```
+
+---
+
+## Database
+
+Database Used:
+
+```text
+MySQL
+```
+
+Database Name:
+
+```text
+task_manager_db
+```
+
+---
+
+## AI Configuration
+
+AI Service:
+
+```text
+Google Gemini API
+```
+
+Required Environment Variable:
+
+```text
+GEMINI_API_KEY
+```
+
+The backend securely reads the API key from environment variables and communicates with Google Gemini to generate task descriptions, priorities, and estimated effort.
 
 ---
 
